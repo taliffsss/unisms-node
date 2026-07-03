@@ -20,6 +20,9 @@
     "type": "git",
     "url": "git+https://github.com/taliffsss/unisms-node.git"
   },
+  "bugs": {
+    "url": "https://github.com/taliffsss/unisms-node/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

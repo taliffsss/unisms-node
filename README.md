@@ -23,6 +23,7 @@ nothing more.
 - [Custom transport](#custom-transport)
 - [API reference](#api-reference)
 - [Testing](#testing)
+- [Publishing](#publishing)
 - [License](#license)
 
 ## Overview
@@ -38,6 +39,14 @@ nothing more.
 
 ```bash
 npm install @taliffsss/unisms
+```
+
+```bash
+yarn add @taliffsss/unisms
+```
+
+```bash
+pnpm add @taliffsss/unisms
 ```
 
 Requires Node.js 18 or later (for built-in `fetch`).
@@ -258,6 +267,12 @@ npm test
 ```
 
 Unit tests mock the `Transport` interface so no real network calls are made.
+
+## Publishing
+
+Maintainers: see [PUBLISHING.md](PUBLISHING.md) for the full release process
+(versioning, tagging, npm credentials, and the automated GitHub Actions
+publish workflow).
 
 ## License
 
