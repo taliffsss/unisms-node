@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Bumped `actions/checkout` and `actions/setup-node` to their latest
+  majors in CI/release workflows (now run on the Node 24 Actions
+  runtime, resolving the Node 20 deprecation warning).
+
 ## [0.1.0] - 2026-07-03
 
 ### Added
