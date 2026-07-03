@@ -1,0 +1,82 @@
+{
+  "name": "@taliffsss/unisms",
+  "version": "0.1.0",
+  "description": "Official Node.js/TypeScript SDK for the UniSMS API (https://unismsapi.com) — a developer-friendly SMS API for the Philippines.",
+  "keywords": [
+    "unisms",
+    "sms",
+    "api",
+    "client",
+    "philippines",
+    "typescript"
+  ],
+  "homepage": "https://github.com/taliffsss/unisms-node",
+  "license": "MIT",
+  "author": {
+    "name": "taliffsss",
+    "email": "anthony.naluz15@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taliffsss/unisms-node.git"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2",
+    "vitest": "^1.6.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

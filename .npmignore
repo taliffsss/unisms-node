@@ -1,0 +1,16 @@
+src/
+tests/
+examples/
+.github/
+.husky/
+.vscode/
+*.config.ts
+*.config.js
+tsconfig.json
+vitest.config.ts
+.eslintrc.cjs
+.prettierrc.json
+.prettierignore
+coverage/
+*.tsbuildinfo
+.DS_Store
