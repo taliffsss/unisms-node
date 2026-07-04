@@ -1,30 +1,38 @@
 # @taliffsss/unisms
 
-Official Node.js/TypeScript SDK for the [UniSMS API](https://unismsapi.com) — a
+Community Node.js/TypeScript SDK for the [UniSMS API](https://unismsapi.com) — a
 powerful, reliable, developer-friendly SMS API for the Philippines, supporting
 all major carriers (Globe, Smart, DITO, Sun, TNT).
 
-This is the Node.js/TypeScript counterpart to the
-[`taliffsss/unisms-php`](https://github.com/taliffsss/unisms-php) reference
-implementation, and intentionally implements the same two API operations —
-nothing more.
+This is a community-maintained library for the UniSMS API, created to
+simplify integration for Node.js and TypeScript developers. It provides
+a clean, intuitive interface scoped to two operations: sending an SMS and
+checking a message's delivery status — nothing more.
 
 ## Table of contents
 
-- [Overview](#overview)
-- [Installation](#installation)
-- [Authentication / secret key setup](#authentication--secret-key-setup)
-- [Quick start](#quick-start)
-- [Sending an SMS](#sending-an-sms)
-- [Checking a message's status](#checking-a-messages-status)
-- [Error handling](#error-handling)
-- [Configuration options](#configuration-options)
-- [Retry policy caveats](#retry-policy-caveats)
-- [Custom transport](#custom-transport)
-- [API reference](#api-reference)
-- [Testing](#testing)
-- [Publishing](#publishing)
-- [License](#license)
+- [@taliffsss/unisms](#taliffsssunisms)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Installation](#installation)
+  - [Authentication / secret key setup](#authentication--secret-key-setup)
+  - [Quick start](#quick-start)
+  - [Sending an SMS](#sending-an-sms)
+  - [Checking a message's status](#checking-a-messages-status)
+  - [Error handling](#error-handling)
+  - [Configuration options](#configuration-options)
+    - [Environment variables](#environment-variables)
+  - [Retry policy caveats](#retry-policy-caveats)
+  - [Custom transport](#custom-transport)
+  - [API reference](#api-reference)
+    - [`new UniSmsClient(secretKey, options?)`](#new-unismsclientsecretkey-options)
+    - [`client.send(request): Promise<UniSmsResponse>`](#clientsendrequest-promiseunismsresponse)
+    - [`client.getMessage(id): Promise<UniSmsResponse>`](#clientgetmessageid-promiseunismsresponse)
+    - [`UniSmsResponse`](#unismsresponse)
+    - [Errors](#errors)
+  - [Testing](#testing)
+  - [Publishing](#publishing)
+  - [License](#license)
 
 ## Overview
 
